@@ -667,6 +667,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"axios@npm:0.21.1":
+  version: 0.21.1
+  resolution: "axios@npm:0.21.1"
+  dependencies:
+    follow-redirects: ^1.10.0
+  checksum: 864fb7b5d077d236737f10adca53bf451a93f35a15271f56fba8da07265a02d26b7d881b935a6697dc6adb0549ea3e56d2eecb403edaa3bb78f6479901c10f69
+  languageName: node
+  linkType: hard
+
 "axobject-query@npm:^2.2.0":
   version: 2.2.0
   resolution: "axobject-query@npm:2.2.0"
@@ -1942,6 +1951,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"follow-redirects@npm:^1.10.0":
+  version: 1.14.2
+  resolution: "follow-redirects@npm:1.14.2"
+  peerDependenciesMeta:
+    debug:
+      optional: true
+  checksum: 5bc2beb11b166b085f140e2fa211aa2243899ba2886c7ad9477ec5c59ad36059b4bcda0356c4af8c90dc25fa3f6f0c280741b2a01de9b5ff331669e25e76b8e4
+  languageName: node
+  linkType: hard
+
 "foreach@npm:^2.0.5":
   version: 2.0.5
   resolution: "foreach@npm:2.0.5"
@@ -3027,6 +3046,7 @@ __metadata:
     "@types/react": 17.0.14
     "@typescript-eslint/eslint-plugin": 4.28.4
     "@typescript-eslint/parser": 4.28.4
+    axios: 0.21.1
     eslint: 7.31.0
     eslint-config-next: 11.0.1
     eslint-plugin-import: ^2.23.4
