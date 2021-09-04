@@ -1,6 +1,9 @@
 .app {
   display: grid;
   grid-auto-flow: column;
+  width: var(--screen-width);
+  height: var(--screen-height);
+  overflow-x: auto;
 }
 
 .heading-primary {
