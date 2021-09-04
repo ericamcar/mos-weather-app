@@ -11,26 +11,33 @@ import styles from "./index.module.scss"
 
 const Index: NextPage = () => {
   const [weather, setWeather] = useState<WeatherContextType | undefined>(undefined)
+  // TODO: Get user's location
+  const [city, setCity] = useState<string>(`Toronto`)
+  const [lastUpdated, setLastUpdated] = useState<string>(``)
 
   useEffect(() => {
     ;(async () => {
       const {data} = await axios.get(`http://api.openweathermap.org/data/2.5/weather`, {
         params: {
-          q: `Toronto`,
+          q: `${city}`,
           appId: process.env.NEXT_PUBLIC_OPEN_WEATHER_API_KEY,
         },
       })
       console.log(data)
       setWeather(data)
     })()
-  }, [])
+
+    const date: Date = new Date()
+    const dateString = date.toLocaleDateString()
+    setLastUpdated(dateString)
+  }, [city])
 
   return (
     <WeatherContext.Provider value={weather}>
       <div className={styles.app}>
         <Screen1 />
         <Screen2 />
-        <Screen3 />
+        <Screen3 city={city} lastUpdated={lastUpdated} />
       </div>
     </WeatherContext.Provider>
   )
