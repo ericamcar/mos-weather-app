@@ -28,8 +28,11 @@ const Index: NextPage = () => {
     })()
 
     const date: Date = new Date()
-    const dateString = date.toLocaleDateString()
-    setLastUpdated(dateString)
+    const dateString = date.toLocaleTimeString(undefined, {
+      hour: `2-digit`,
+      minute: `2-digit`,
+    })
+    setLastUpdated(`Last updated: ${dateString}`)
   }, [city])
 
   return (
