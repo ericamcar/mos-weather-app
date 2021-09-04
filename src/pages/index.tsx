@@ -38,7 +38,7 @@ const Index: NextPage = () => {
   return (
     <WeatherContext.Provider value={weather}>
       <div className={styles.app}>
-        <Screen1 />
+        <Screen1 city={city} lastUpdated={lastUpdated}/>
         <Screen2 />
         <Screen3 city={city} lastUpdated={lastUpdated} />
       </div>
