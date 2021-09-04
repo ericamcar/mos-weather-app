@@ -1,29 +1,12 @@
 .app {
   display: grid;
-  grid-auto-flow: column;
+  grid-template-rows: auto 1fr;
   width: var(--screen-width);
   height: var(--screen-height);
+}
+
+.screen-container {
+  display: grid;
+  grid-template-columns: repeat(3, var(--screen-width));
   overflow-x: auto;
-}
-
-.heading-primary {
-  color: #4e4e4e;
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-}
-
-.heading-secondary {
-  color: #4e4e4e;
-  font-family: "Poppins", sans-serif;
-}
-
-.heading-tertiary {
-  color: #4e4e4e;
-  font-family: "Poppins", sans-serif;
-}
-
-.heading-quaternary {
-  color: #4e4e4e;
-  text-align: center;
-  font-family: "Poppins", sans-serif;
 }
