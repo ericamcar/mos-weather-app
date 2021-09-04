@@ -16,16 +16,16 @@ const Index: NextPage = () => {
   const [lastUpdated, setLastUpdated] = useState<string>(``)
 
   useEffect(() => {
-    ;(async () => {
-      const {data} = await axios.get(`http://api.openweathermap.org/data/2.5/weather`, {
-        params: {
-          q: `${city}`,
-          appId: process.env.NEXT_PUBLIC_OPEN_WEATHER_API_KEY,
-        },
-      })
-      console.log(data)
-      setWeather(data)
-    })()
+    // ;(async () => {
+    //   const {data} = await axios.get(`http://api.openweathermap.org/data/2.5/weather`, {
+    //     params: {
+    //       q: `${city}`,
+    //       appId: process.env.NEXT_PUBLIC_OPEN_WEATHER_API_KEY,
+    //     },
+    //   })
+    //   console.log(data)
+    //   setWeather(data)
+    // })()
 
     const date: Date = new Date()
     const dateString = date.toLocaleTimeString(undefined, {
