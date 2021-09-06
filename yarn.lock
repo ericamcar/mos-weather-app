@@ -239,6 +239,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/dateformat@npm:3.0.1":
+  version: 3.0.1
+  resolution: "@types/dateformat@npm:3.0.1"
+  checksum: 42085a68fb05370b11f18fa688e700b36452d97794e6550dab7d1025b986e876b56b5f0935f23de7310a41b31ae2369538eae3af0a21021b497e8c81f09c4fb3
+  languageName: node
+  linkType: hard
+
 "@types/json-schema@npm:^7.0.7":
   version: 7.0.8
   resolution: "@types/json-schema@npm:7.0.8"
@@ -1255,6 +1262,13 @@ __metadata:
   version: 3.0.1
   resolution: "data-uri-to-buffer@npm:3.0.1"
   checksum: 9f28217ba76eaca400a75f4b1a1d0f55058082c8152a3d88ad5feeec5e54b8c7b6d8a7bb210206bfa552a927c1b942b6102ddbb2feaa557321ea94762c4f14e2
+  languageName: node
+  linkType: hard
+
+"dateformat@npm:4.5.1":
+  version: 4.5.1
+  resolution: "dateformat@npm:4.5.1"
+  checksum: d5d08fd36f0987570cacada467145c722b4051285fae32969d62ef4bfc3c392f310bf6982a3ecbe62f0b42a944846d94a2bff53b8051ad1540bcaf118732fbf4
   languageName: node
   linkType: hard
 
@@ -3043,10 +3057,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "next-app@workspace:."
   dependencies:
+    "@types/dateformat": 3.0.1
     "@types/react": 17.0.14
     "@typescript-eslint/eslint-plugin": 4.28.4
     "@typescript-eslint/parser": 4.28.4
     axios: 0.21.1
+    dateformat: 4.5.1
     eslint: 7.31.0
     eslint-config-next: 11.0.1
     eslint-plugin-import: ^2.23.4

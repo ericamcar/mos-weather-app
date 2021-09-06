@@ -1,29 +1,22 @@
 body {
   margin: 0px;
   overflow: hidden;
+  font-family: proxima-nova;
 
   --screen-width: 100vw;
   --screen-height: 100vh;
 }
 
-.heading-primary {
-  color: #4e4e4e;
-  text-align: center;
-  font-family: "Poppins", sans-serif;
+* {
+  box-sizing: border-box;
 }
 
-.heading-secondary {
-  color: #4e4e4e;
-  font-family: "Poppins", sans-serif;
-}
-
-.heading-tertiary {
-  color: #4e4e4e;
-  font-family: "Poppins", sans-serif;
-}
-
-.heading-quaternary {
-  color: #4e4e4e;
-  text-align: center;
-  font-family: "Poppins", sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
 }

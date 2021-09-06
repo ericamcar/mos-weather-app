@@ -1,4 +1,5 @@
 import axios from "axios"
+import dateFormat from "dateformat"
 import {NextPage} from "next"
 import React, {useEffect, useState} from "react"
 
@@ -11,7 +12,6 @@ import styles from "./index.module.scss"
 
 const Index: NextPage = () => {
   const [weather, setWeather] = useState<WeatherContextType | undefined>(undefined)
-  const [lastUpdated, setLastUpdated] = useState<string>(``)
 
   useEffect(() => {
     ;(async () => {
@@ -28,13 +28,6 @@ const Index: NextPage = () => {
           },
         })
         setWeather(data)
-
-        const date: Date = new Date()
-        const dateString = date.toLocaleTimeString(undefined, {
-          hour: `2-digit`,
-          minute: `2-digit`,
-        })
-        setLastUpdated(`Last updated: ${dateString}`)
       })
     })()
   }, [])
@@ -42,9 +35,11 @@ const Index: NextPage = () => {
   return (
     <WeatherContext.Provider value={weather}>
       <div className={styles.app}>
-        <div>
-          <h4 className="heading-quaternary">{lastUpdated}</h4>
-          <h1 className="heading-primary">{weather?.name}</h1>
+        <div className={styles.header}>
+          <span style={{fontSize: `0.8rem`, opacity: 0.7}}>
+            Last updated at {weather && dateFormat(weather.dt * 1000, `shortTime`)}
+          </span>
+          <h1>{weather?.name}</h1>
         </div>
         <div className={styles[`screen-container`]}>
           <Screen1 />

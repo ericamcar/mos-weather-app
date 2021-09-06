@@ -9,10 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/dateformat": "3.0.1",
     "@types/react": "17.0.14",
     "@typescript-eslint/eslint-plugin": "4.28.4",
     "@typescript-eslint/parser": "4.28.4",
     "axios": "0.21.1",
+    "dateformat": "4.5.1",
     "eslint": "7.31.0",
     "eslint-config-next": "11.0.1",
     "eslint-plugin-import": "^2.23.4",
