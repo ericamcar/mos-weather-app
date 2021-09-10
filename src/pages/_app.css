@@ -1,10 +1,16 @@
 body {
-  margin: 0px;
-  overflow: hidden;
-  font-family: proxima-nova;
-
   --screen-width: 100vw;
   --screen-height: 100vh;
+
+  --gradient-top: white;
+  --gradient-bottom: white;
+  --text-color: black;
+
+  margin: 0px;
+  overflow: hidden;
+  font-family: Lato, sans-serif;
+  background-image: linear-gradient(var(--gradient-top), var(--gradient-bottom));
+  color: var(--text-color);
 }
 
 * {
